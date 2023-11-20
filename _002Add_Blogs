@@ -1,0 +1,67 @@
+// Edit Js code:-
+
+  ];
+//Create your function here with the name addBlog which takes a blog object as parameter
+//Call each object present in blogData with addBlog.
+//If page does not update the changes automatically please refresh
+
+function addBlog(blog){
+    const blogpostdiv = document.createElement('div');
+    blogpostdiv.classList.add("blog-post");
+    
+    
+    const blogheaderdiv =  document.createElement('div');
+    blogheaderdiv.classList.add("blog-header");
+    
+    const eleh2 = document.createElement('h2');
+    eleh2.classList.add("blog-title");
+    eleh2.textContent = blog.title;
+//     staement 5
+     const blogdatep = document.createElement('p');
+     blogdatep.classList.add("blog-date");
+      blogdatep.textContent = blog.date;
+    
+    
+//     statement 6
+     const blogcontentp = document.createElement('p');
+     blogcontentp.classList.add("blog-content");
+    blogcontentp.textContent = blog.content;
+    
+    // statement 7
+    blogheaderdiv.appendChild(eleh2);
+       blogpostdiv.appendChild(blogdatep);
+    blogheaderdiv.appendChild(blogcontentp);
+    
+    // staetemnt 8
+    blogpostdiv.appendChild(blogheaderdiv);
+  
+    
+    // statement 9
+    blogpostdiv.appendChild(blogcontentp);
+    
+    // statement 10
+    var containerlist = document.querySelector('.blog-list');
+    containerlist.appendChild(blogpostdiv);
+    
+    
+    }
+       blogData.forEach(blog=>addBlog(blog));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
